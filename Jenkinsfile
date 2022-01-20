@@ -4,6 +4,11 @@ node('master')
 	{
           git 'https://github.com/TimeMachine00/multibranchJenkin.git'
 	}
+	
+    stage('Continuousbuild_loans')
+         {
+            sh label: '', script: 'mvn package'
+        }
    
     
 }
